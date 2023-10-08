@@ -1,0 +1,175 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #5d497c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar .logo img {
+    border: 2px solid #9f8ab1;
+    border-radius: 50%;
+    height: 45px;
+}
+
+.nav-links a {
+    font-family: 'Aladin', cursive;
+    background-color: #918ab1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links #gallery-link {
+    margin-right: 30px;
+}
+
+/* Banner styles */
+.banner {
+    background-image: url(background.png);
+    padding: 20px;
+    background-color: rgb(215, 243, 250);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner h1 {
+    font-family: 'Aladin', cursive;
+    color: #a49ac9;
+    font-size: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px #372c57;
+    text-align: left;
+}
+
+.banner h1 span {
+    color: #5d5583;
+}
+
+.banner p {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 1.2em;
+    color: #18132a;
+    text-shadow: 1px 1px #c5b9e1;
+    padding-bottom: 15px;
+}
+
+.banner a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: left;
+}
+
+#highlight-link {
+    font-family: 'Aladin', cursive;
+    font-size: 1.5em;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background-color: #7f6a98;
+    color: #e6dbf5;
+    text-shadow: 1px 2px #655583;
+}
+
+/* Footer styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4f476c;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 10px;
+}
+
+.footer p {
+    font-family: 'Alice', serif;
+    color: #a49ac9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.social-links a {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.social-links img {
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Gallery page styles */
+.gallery {
+    padding: 20px;
+    background-color: #887ca9;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.gallery h1 {
+    font-size: 2.5em;
+    font-family: 'Alice', serif;
+    color: #f6f2ff;
+    text-shadow: 4px 1px #1e1728;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery sup {
+    font-size: 1.2em;
+}
+
+.pics img {
+    opacity: 0.7;
+    transition: 0.2s;
+    margin: 20px;
+    width: 20%;
+    border: 5px solid #6d5583;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pics img:hover {
+    opacity: 1;
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+
+/* Individual image descriptions */
+.image {
+    position: relative;
+}
+
+.image::after {
+    content: attr(title);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.image:hover::after {
+    display: block;
+}
